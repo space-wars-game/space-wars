@@ -1,4 +1,4 @@
-FROM mmpg/base:0.1.1
+FROM mmpg/base:0.1.2
 MAINTAINER Héctor Ramón Jiménez <hector0193@gmail.com>
 
 # Set working directory
