@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+./build/master &
+./build/api &
+
+wait
+kill -QUIT 0
