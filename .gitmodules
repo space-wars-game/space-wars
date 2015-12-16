@@ -1,0 +1,9 @@
+[submodule "api"]
+	path = api
+	url = https://github.com/mmpg/api.git
+[submodule "engine"]
+	path = engine
+	url = https://github.com/space-wars-game/engine.git
+[submodule "viewer"]
+	path = viewer
+	url = https://github.com/mmpg/client.git
