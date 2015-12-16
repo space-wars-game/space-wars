@@ -5,7 +5,7 @@ MAINTAINER Héctor Ramón Jiménez <hector0193@gmail.com>
 WORKDIR game
 
 # Add game files
-ADD . /
+ADD . .
 
 # Update submodules
 RUN git submodule update --init --recursive
