@@ -2,6 +2,14 @@
 
 set -e
 
-./engine/bin/build
-./api/bin/build
-./viewer/bin/build
+cd engine
+./bin/build
+cd ..
+
+cd api
+./bin/build
+cd ..
+
+cd viewer
+./bin/build
+cd ..

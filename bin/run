@@ -2,8 +2,13 @@
 
 set -e
 
+cd engine
 ./build/master &
+cd ..
+
+cd api
 ./build/api &
+cd ..
 
 wait
 kill -QUIT 0
