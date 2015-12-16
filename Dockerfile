@@ -1,4 +1,4 @@
-FROM mmpg/base:0.1.2
+FROM mmpg/base:0.1.3
 MAINTAINER Héctor Ramón Jiménez <hector0193@gmail.com>
 
 # Set working directory
@@ -7,14 +7,14 @@ WORKDIR game
 # Add game files
 ADD . .
 
-# Update submodules
-RUN git submodule update --init --recursive
+# Install API
+COPY go get github.com/mmpg/api/cmd/api
 
-# Build game
-RUN ./bin/build
+# Build engine
+RUN ./engine/bin/build
 
 # Copy viewer files to nginx directory
-COPY ./dist /usr/share/nginx/www
+COPY ./viewer/dist/* /usr/share/nginx/www/.
 
 # Run game
 CMD ./bin/run
