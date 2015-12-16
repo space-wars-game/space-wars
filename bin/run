@@ -2,12 +2,10 @@
 
 set -e
 
+api &
+
 cd engine
 ./build/master &
-cd ..
-
-cd api
-./build/api &
 cd ..
 
 wait

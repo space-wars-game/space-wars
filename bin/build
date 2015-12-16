@@ -2,14 +2,15 @@
 
 set -e
 
+echo "Downloading API..."
+go get github.com/mmpg/api/cmd/api
+
+echo "Compiling engine..."
 cd engine
 ./bin/build
 cd ..
 
-cd api
-./bin/build
-cd ..
-
+echo "Building viewer..."
 cd viewer
 ./bin/build
 cd ..
