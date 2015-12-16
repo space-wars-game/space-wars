@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -e
+
+./engine/bin/build
+./api/bin/build
+./viewer/bin/build
