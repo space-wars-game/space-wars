@@ -2,11 +2,9 @@
 
 set -e
 
+service nginx start
+
 api &
 
 cd engine
-./build/master &
-cd ..
-
-wait
-kill -QUIT 0
+./build/master
